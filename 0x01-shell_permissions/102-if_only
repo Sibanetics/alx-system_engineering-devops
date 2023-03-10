@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# check if the file exists and is owned by guillaume
+if [ -f "hello" ] && [ "$(stat -c '%U' hello)" = "guillaume" ]; then
+  # change the owner to betty
+  chown betty hello
+  echo "Changed the owner of hello to betty."
+else
+  echo "Cannot change the owner of hello to betty. The file does not exist or is not owned by guillaume."
+fi

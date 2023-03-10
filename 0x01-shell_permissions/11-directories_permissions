@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Find all directories in the current directory
+directories=$(find . -type d)
+
+# Add execute permission to each directory for owner, group owner, and all other users
+for dir in $directories; do
+  chmod a+x "$dir"

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# Create my_dir with permissions 751 in the current working directory
+mkdir -m 751 my_dir
